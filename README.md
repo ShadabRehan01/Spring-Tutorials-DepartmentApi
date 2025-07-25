@@ -1,19 +1,28 @@
-📘 DepartmentApi 
-This project belongs to Spring Boot Tutorials. It is a simple RESTful DepartmentApi built using Spring Boot, Spring Data JPA, and MySQL. It supports full CRUD operations along with exception handling and response wrapping.
+# 📘 DepartmentApi
 
-🚀 Tech Stack Used
-Java 17
-Spring Boot
-Spring Data JPA
-MySQL
-Hibernate
-Jakarta Validation
-IntelliJ IDEA
-Maven
-Postman
+> **This project belongs to Spring Boot Tutorials.**
 
-📁 Project Structure
+A simple and well-structured **RESTful Department Management API** built using **Spring Boot**, **Spring Data JPA**, and **MySQL**. It performs full **CRUD operations**, with added features like **global exception handling** and **custom API response formatting**.
 
+---
+
+## 🚀 Tech Stack Used
+
+* **Java 17**
+* **Spring Boot**
+* **Spring Data JPA**
+* **MySQL**
+* **Hibernate**
+* **Jakarta Validation**
+* **Maven**
+* **IntelliJ IDEA**
+* **Postman**
+
+---
+
+## 📁 Project Structure
+
+```
 src/
 └── main/
     ├── java/
@@ -22,43 +31,61 @@ src/
     │       ├── annotations/         → (Reserved for custom annotations)
     │       ├── configs/             → Spring configurations (ModelMapper, etc.)
     │       ├── controllers/         → REST API endpoints
-    │       ├── dto/                 → DepartmentDto (used for API input/output)
-    │       ├── entity/              → Department entity (database mapping)
-    │       ├── exceptions/          → Custom exceptions
+    │       ├── dto/                 → DepartmentDto (input/output layer)
+    │       ├── entity/              → Department entity (JPA mapping)
+    │       ├── exceptions/          → Custom exception classes
     │       ├── repositories/        → JPA repository interfaces
-    │       └── services/            → Service logic interfaces and implementations
+    │       └── services/            → Business logic layer
     └── resources/
-        └── application.properties   → DB configuration and Spring setup
+        └── application.properties   → DB & Spring Boot configuration
+```
 
-🧠 Features
+---
+
+## 🧠 Features
 
 ✅ Create a new department
-✅ Get all departments
-✅ Get a department by ID
+✅ Fetch all departments
+✅ Fetch a department by ID
 ✅ Update department (PUT)
 ✅ Partially update department (PATCH)
-✅ Delete department
+✅ Delete department by ID
 ✅ Global exception handling
-✅ Global custom API response structure
+✅ Standardized API response structure
 
-🔌 REST API Endpoints
+---
+
+## 🔌 REST API Endpoints
 
 | Method   | Endpoint           | Description             |
 | -------- | ------------------ | ----------------------- |
-| `GET`    | `/department`      | Get all departments     |
-| `GET`    | `/department/{id}` | Get department by ID    |
+| `GET`    | `/department`      | Fetch all departments   |
+| `GET`    | `/department/{id}` | Fetch department by ID  |
 | `POST`   | `/department`      | Create a new department |
 | `PUT`    | `/department/{id}` | Full update by ID       |
-| `PATCH`  | `/department/{id}` | Partial update          |
-| `DELETE` | `/department/{id}` | Delete by ID            |
+| `PATCH`  | `/department/{id}` | Partial update by ID    |
+| `DELETE` | `/department/{id}` | Delete department       |
 
-⚙️ Configuration
-Update your application.properties like this:
+---
+
+## ⚙️ Configuration
+
+Update your `application.properties`:
+
+```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/departmentdb
 spring.datasource.username=root
 spring.datasource.password=yourpassword
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 server.port=8080
+```
 
+---
 
+## 🙋‍♂️ Author
+
+**Shadab Rehan**
+LinkedIn - https://www.linkedin.com/in/shadabrehan
+
+---
